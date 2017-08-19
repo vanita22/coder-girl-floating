@@ -136,7 +136,9 @@ a li{
 	padding: 5px;
 }
 
-.box-f textarea{
+.box-f #msn{
+	width: 400px;
+	height: 20vh;
 	border-radius: 5px;
 	border-style: none;
 	border: 1px solid grey;

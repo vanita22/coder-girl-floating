@@ -3,40 +3,50 @@ $(document).ready(function() {
     /*Validación de Formulario*/
     var nom = /^([A-Z][a-z]{1,10})+ ([A-Z][a-z]{1,10})+$/; //valida que el nombre sea la primera letra con mayúcula y el resto con minúscula con un  máximo de 10 caracteres.
     var correo = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/; //valido para cualquier correo
-    var msn = /^[a-zA-Z]+$/;   //contraseña con num y letras max 100 dígitos
-
-    $(".btn").click(function(){         
+   
+    $("#enviar").click(function(){         
         var nombre = $("#name").val(); 
         var email = $("#mail").val();
-        var mensaje = $("#mensaje").val();
+        var asunt = $("#asunto").val();
+        var msn = $("#msn").val();
         
         if(!nom.test(nombre)){
            $("#mensaje").fadeIn("slow");           
-               return false;
+                return false;
         }else{
-            $("#mensaje").fadeOut();            
+            $("#mensaje").fadeOut();                            
         }
         if(!correo.test(email)){
             $("#mensaje1").fadeIn("slow");
-               return false;
+                return false;
         }else{
-            $("#mensaje1").fadeOut();            
-        }
-        if(!msn.test(mensaje)){
-            $("#mensaje2").fadeIn("slow");
-               return false;
-        }else{
-            $("#mensaje2").fadeOut();                      
+            $("#mensaje1").fadeOut();                           
         } 
-        return true;             
+        if(asunt == ""){
+            $("#mensaje2").fadeIn("slow");
+                return false;
+        }else{
+            $("#mensaje2").fadeOut();                            
+        } 
+        /*if(msn == ""){
+            $("#mensaje3").fadeIn("slow");
+                return false;
+        }else{
+            $("#mensaje3").fadeOut();                      
+        } */        
+
+        alert("su mensaje ha sido enviado");
+        
+        $("#name").val(" "); 
+        $("#mail").val(" ");
+        $("#asunto").val(" ");
+        $("#msn").val(" ");
+        return true;
     }) 
-        $("#name").val(""); 
-        $("#mail").val("");
-        $("#mensaje").val("");
+        
 
     /*Cambio de texto*/
-    $("#boton2").hide();  
-
+    $("#boton2").hide();
     
     var cambio = $("#box-a h1").text();
     $("#boton").click(function(){

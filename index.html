@@ -65,7 +65,7 @@
             <h2>CONTACTO</h2>
             <p>Code Girls</p>
             <h5>795 Folsom Ave, Suite 600<br>San Francisco, CA 94107<br>Fono: (123) 456-7890</h5>
-            <div class="box-f">
+            <div class="box-f" id="form">
                 <input type="text" name="nombre" placeholder="Nombre" id="name">
                 <div id="mensaje" class="errores">Ingrese nombre y apellido con primera letra mayúcula y minúsculas</div>
 
@@ -73,11 +73,12 @@
                 <div id="mensaje1" class="errores">Ingrese mail válido</div>
 
                 <input type="text" name="asunto" placeholder="Asunto" id="asunto">
+                <div id="mensaje2" class="errores">Campo no debe quedar vacío</div>
 
-                <textarea name="textarea" rows="10" cols="55" placeholder="Mensaje" id="mensaje"></textarea><div id="mensaje2" class="errores">Sólo texto máximo de 100 carácteres.</div><br><br>
+                <input type="text" name="texto" placeholder="Mensaje" id="msn">
+                <div id="mensaje3" class="errores">Texto máximo de 100 carácteres.</div><br><br>
 
-                <button class="btn">Enviar</button>
-                <div id="mensaje3" class="msn2">su mensaje ha sido enviado</div>
+                <button class="btn" id="enviar">Enviar</button>                
             </div>            
         </div>
     </section>
