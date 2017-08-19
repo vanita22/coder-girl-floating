@@ -1,0 +1,137 @@
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+ /*Menú*/
+nav{
+	background-color: #f8f8f8;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	padding: 10px;
+	display: inline-block;
+	top: 0;
+}
+
+nav h3{
+	display: inline-block;
+	float: left;
+	margin-left: 7%;
+	color: #717171;
+}
+
+nav ul{
+	display: inline-block;
+	float: right;
+	margin-right: 10%;
+}
+
+a li{
+	display: inline-block;
+	margin-right: 10px;
+	color: blue;
+}
+
+/*Caja uno*/
+
+#box{
+	background-image: url('../img/home.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 80vh;
+	margin-top: 6%;
+	overflow: auto;
+}
+
+.box-a{
+	margin-top: 15%;
+}
+
+.box-a h1{
+	color: white;
+	font-size: 40px;
+}
+
+.btn{
+	background-color: blue;
+	color: white;
+	border-radius: 5px;
+	padding: 10px;
+	border-style: none;
+}
+
+/*Caja dos*/
+
+#box-2{
+ 	background-color: yellow;
+ 	width: 92.5%;
+ 	height: 50vh;
+ 	padding: 50px;
+ 	margin-top: 5%;
+ 	overflow: auto;
+ 	display: inline-block;
+}
+
+.box-b{
+ 	display: inline-block;
+}
+
+.box-b img{ 	
+ 	float: left;
+ 	width: 500px;
+ 	height: 300px;
+}
+
+.box-c{
+ 	float: right;
+ 	display: inline-block;
+}
+
+.box-c h2{
+ 	text-align: center;
+}
+
+/*Caja tres*/
+
+#box-3{
+ 	width: 92.5%;
+ 	height: auto;
+ 	padding: 50px;
+ 	margin-top: 5%;
+ 	overflow: auto;
+ 	display: inline-block;
+}
+
+.box-d{
+ 	display: inline-block;
+}
+
+.box-d img{ 	
+ 	float: left;
+ 	width: 650px;
+ 	height: 300px;
+ 	margin-top: 15%;
+}
+
+.box-e{
+ 	float: right;
+ 	display: inline-block;
+ 	margin-right: 10%;
+}
+
+.box-f input{
+	width: 400px;
+	display: block;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	border-style: none;
+	border: 1px solid grey;
+	padding: 5px;
+}
+
+.box-f textarea{
+	border-radius: 5px;
+	border-style: none;
+	border: 1px solid grey;
+}
