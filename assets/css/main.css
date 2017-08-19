@@ -135,3 +135,25 @@ a li{
 	border-style: none;
 	border: 1px solid grey;
 }
+
+/*Footer*/
+
+footer{
+	background-color: #61a3d0;
+	width: 99%;
+	height: auto;
+	padding: 10px;
+}
+
+footer p{
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 5%;
+	color: white;
+}
+
+footer h5{
+	display: inline-block;
+	font-size: 17px;
+	color: yellow;
+}
