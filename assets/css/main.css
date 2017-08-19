@@ -44,11 +44,11 @@ a li{
 	overflow: auto;
 }
 
-.box-a{
+#box-a{
 	margin-top: 15%;
 }
 
-.box-a h1{
+#box-a h1{
 	color: white;
 	font-size: 40px;
 }
@@ -90,6 +90,12 @@ a li{
 
 .box-c h2{
  	text-align: center;
+}
+
+.box-c img{
+	width: 500px;
+	height: 250px;
+	margin-right: 10%;
 }
 
 /*Caja tres*/
@@ -156,4 +162,28 @@ footer h5{
 	display: inline-block;
 	font-size: 17px;
 	color: yellow;
+}
+
+.errores{
+   	background: red;
+    color: #fff;
+    display: none;
+    font-size: 14px;
+    margin-top: -22px;
+    margin-left: 100px;
+    padding: 1px;
+    position: absolute;
+    width: auto;
+}
+
+.msn2{
+	background: white;
+    color: #000;
+    display: none;
+    font-size: 14px;
+    margin-top: -22px;
+    margin-left: 150px;
+    padding: 1px;
+    position: absolute;
+    width: 50%;
 }

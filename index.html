@@ -5,7 +5,6 @@
 	<title>Dobby Spa</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">	
 	<link rel="stylesheet" href="assets/css/main.css">	
 </head>
@@ -25,10 +24,12 @@
 
     <!--Caja uno-->
     <section id="box">
-        <div class="box-a" align="center">
+        <div id="box-a" align="center">
             <h1>CHICAS QUE CAMBIAN EL MUNDO</h1>
             <h5>¡Participa en nuestras actividades!</h5>
-            <button class="btn">Inscribete</button>
+            <button class="btn" id="boton">Inscribete</button>
+            <button class="btn" id="boton2">volver</button>
+
         </div>
     </section>
     
@@ -39,11 +40,19 @@
         </div>
 
         <div class="box-c">
-            <h2>HACKATHON</h2>
-            <p>¡Participa en nuestra hackathon "Love is Respect"!</p>
-            <h5>Idea soluciones a las problemáticas que te presentaremos, rodeada de chicas tan geniales<br> como tú. Nos reuniremos el 30 de Septiembre desde las 10 am.</h5>
-            <button class="btn">Hackathon</button>
+            <div class="boxv">
+                <img src='assets/img/women.jpg'>
+            </div>
+            <div class="boxr">
+                <h2>HACKATHON</h2>
+                <p>¡Participa en nuestra hackathon "Love is Respect"!</p>
+                <h5>Idea soluciones a las problemáticas que te presentaremos, rodeada de chicas tan geniales<br> como tú. Nos reuniremos el 30 de Septiembre desde las 10 am.</h5> 
+            </div><br>            
+
+            <button class="btn" id="boton3">Hackathon</button>
+            <button class="btn" id="boton4">volver</button>          
         </div>
+        
     </section>
 
     <!--Caja tres-->
@@ -58,10 +67,17 @@
             <h5>795 Folsom Ave, Suite 600<br>San Francisco, CA 94107<br>Fono: (123) 456-7890</h5>
             <div class="box-f">
                 <input type="text" name="nombre" placeholder="Nombre" id="name">
+                <div id="mensaje" class="errores">Ingrese nombre y apellido con primera letra mayúcula y minúsculas</div>
+
                 <input type="text" name="email" placeholder="Email" id="mail">
+                <div id="mensaje1" class="errores">Ingrese mail válido</div>
+
                 <input type="text" name="asunto" placeholder="Asunto" id="asunto">
-                <textarea name="textarea" rows="10" cols="55" placeholder="Mensaje" id="mensaje"></textarea><br><br>
+
+                <textarea name="textarea" rows="10" cols="55" placeholder="Mensaje" id="mensaje"></textarea><div id="mensaje2" class="errores">Sólo texto máximo de 100 carácteres.</div><br><br>
+
                 <button class="btn">Enviar</button>
+                <div id="mensaje3" class="msn2">su mensaje ha sido enviado</div>
             </div>            
         </div>
     </section>

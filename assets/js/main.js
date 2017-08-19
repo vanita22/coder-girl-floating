@@ -1,43 +1,70 @@
 $(document).ready(function() {
     
     /*Validación de Formulario*/
-    var nombreIngreso = /^([a-z]|[A-Z])+ ([a-z]|[A-Z])+$/;
+    var nom = /^([A-Z][a-z]{1,10})+ ([A-Z][a-z]{1,10})+$/; //valida que el nombre sea la primera letra con mayúcula y el resto con minúscula con un  máximo de 10 caracteres.
     var correo = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/; //valido para cualquier correo
-    var contra = /^[a-zA-Z0-9.\-_$@*!]{3,20}$/;  //contraseña con num y letras max 20 dígitos
-    
-    $(".crear").click(function(){         
+    var msn = /^[a-zA-Z]+$/;   //contraseña con num y letras max 100 dígitos
+
+    $(".btn").click(function(){         
         var nombre = $("#name").val(); 
-        var email = $("#email").val();
-        var pass = $("#password").val();
+        var email = $("#mail").val();
+        var mensaje = $("#mensaje").val();
         
-        if(!nombreIngreso.test(nombre)){
+        if(!nom.test(nombre)){
            $("#mensaje").fadeIn("slow");           
                return false;
         }else{
-            $("#mensaje").fadeOut();
-            localStorage.setItem('nom', nombre);/*ingreso de datos al local storage*/
-            console.log(nombre);
+            $("#mensaje").fadeOut();            
         }
         if(!correo.test(email)){
             $("#mensaje1").fadeIn("slow");
                return false;
         }else{
-            $("#mensaje1").fadeOut();
-            localStorage.setItem('correo', email);/*ingreso de datos al local storage*/
-            console.log(email);
+            $("#mensaje1").fadeOut();            
         }
-        if(!contra.test(pass)){
+        if(!msn.test(mensaje)){
             $("#mensaje2").fadeIn("slow");
                return false;
         }else{
-            $("#mensaje2").fadeOut();
-            localStorage.setItem('contra', pass);/*ingreso de datos al local storage*/
-            console.log(pass);
-            $("#btn-crear").attr("href","login.html");
+            $("#mensaje2").fadeOut();                      
         } 
-        return true; 
+        return true;             
+    }) 
         $("#name").val(""); 
-        $("#email").val("");
-        $("#password").val("");
-    })   
-});
+        $("#mail").val("");
+        $("#mensaje").val("");
+
+    /*Cambio de texto*/
+    $("#boton2").hide();  
+
+    
+    var cambio = $("#box-a h1").text();
+    $("#boton").click(function(){
+        var cambio2 = cambio.replace("CHICAS QUE CAMBIAN EL MUNDO", "TU PUEDES HACER MUCHO MÁS!");
+        $("#box-a h1").text(cambio2);
+        $("#boton2").show();
+    })
+
+    $("#boton2").click(function(){
+        var cambio3 = cambio.replace("TU PUEDES HACER MUCHO MÁS!", "CHICAS QUE CAMBIAN EL MUNDO");
+        $("#box-a h1").text(cambio3);
+        $("#boton2").hide();
+    })
+   
+
+    /*Cambio de imagen*/
+    $("#boton4").hide();
+    $(".boxv").hide();     
+        
+    $("#boton3").click(function(){
+        $(".boxr").hide();            
+        $(".boxv").show();                      
+        $("#boton4").show();
+    }); 
+
+    $("#boton4").click(function(){ 
+        $(".boxv").hide();   
+        $("#boton4").hide();
+        $(".boxr").show();
+    }); 
+})
